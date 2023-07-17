@@ -14,12 +14,10 @@ namespace BankGraphQL.DTO.Handlers.Impl.Account
     public class GetByIdAccountHandler : IGetByIdAccountHandler
     {
         private readonly IAccountRepository _repository;
-        private readonly IUserRepository _userRepository;
 
-        public GetByIdAccountHandler(IAccountRepository repository, IUserRepository userRepository)
+        public GetByIdAccountHandler(IAccountRepository repository)
         {
             _repository = repository;
-            _userRepository = userRepository;
         }
 
         public AccountResponse Execute(GetByIdAccountRequest request)

@@ -21,7 +21,7 @@ namespace BankGraphQL.DTO.Handlers.Impl.User
             var user = _repository.GetById(request.Id);
 
             if (user == null)
-                throw new Exception("Usuário não encontrada");
+                throw new Exception("Usuário não encontrado");
 
             return new UserResponse
             {

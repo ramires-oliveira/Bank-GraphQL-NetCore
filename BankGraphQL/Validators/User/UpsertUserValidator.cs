@@ -10,14 +10,14 @@ namespace BankGraphQL.Validators.User
             RuleFor(x => x.Name)
                 .NotEmpty()
                 .NotNull()
-                .MinimumLength(5)
+                .MinimumLength(2)
                 .MaximumLength(20)
                 .WithName("nome");
 
             RuleFor(x => x.Email)
                 .MinimumLength(10)
                 .MaximumLength(50)
-                .WithName("nome");
+                .WithName("email");
         }
     }
 }

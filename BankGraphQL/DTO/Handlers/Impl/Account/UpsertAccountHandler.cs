@@ -40,6 +40,20 @@ namespace BankGraphQL.DTO.Handlers.Impl.Account
                     throw new Exception("Conta não encontrada");
                 }
 
+                var accountExistis = _repository.GetByNumber(request.Number);
+
+                if (accountExistis != null)
+                {
+                    throw new Exception("Número de conta já utilizada.");
+                }
+
+                var userExistis = _userRepository.GetAll().FirstOrDefault(x => x.Id == request.UserId);
+
+                if (userExistis == null)
+                {
+                    throw new Exception("Usuário vinculado à conta não encontrado.");
+                }
+
                 entity.Id = request.Id;
                 entity.Number = request.Number;
                 entity.Value = request.Value;
