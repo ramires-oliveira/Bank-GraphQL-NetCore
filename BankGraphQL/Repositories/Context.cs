@@ -20,11 +20,11 @@ namespace BankGraphQL.Repositories
                 .HasColumnType("decimal(10, 2)");
 
             modelBuilder.Entity<User>().HasData(
-                new User { Id = new Guid("11111111-1111-1111-1111-111111111111"), Name = "User 1", Email = "user1@user1.com" }
+                new User { Id = new Guid("11111111-1111-1111-1111-111111111111"), Name = "User", Email = "user@user.com" }
             );
 
             modelBuilder.Entity<Account>().HasData(
-                new Account { Id = new Guid("11111111-1111-1111-0000-000000000001"), UserId = new Guid("11111111-1111-1111-1111-111111111111"), Number="50150", Value = 1000.00M, Active = true}
+                new Account { Id = new Guid("11111111-1111-1111-0000-000000000001"), UserId = new Guid("11111111-1111-1111-1111-111111111111"), Number= "54321", Value = 1000.00M, Active = true}
             );
 
             base.OnModelCreating(modelBuilder);

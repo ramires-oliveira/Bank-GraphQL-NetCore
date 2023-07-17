@@ -1,5 +1,6 @@
 ﻿using BankGraphQL.Domain;
 using BankGraphQL.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace BankGraphQL.Repositories.Impl
 {
@@ -19,7 +20,7 @@ namespace BankGraphQL.Repositories.Impl
 
         public Account GetById(Guid id)
         {
-            return _context.Account.FirstOrDefault(x => x.Id == id);
+            return _context.Account.Include(a => a.User).FirstOrDefault(x => x.Id == id);
         }
 
         public Account GetByNumber(string number)

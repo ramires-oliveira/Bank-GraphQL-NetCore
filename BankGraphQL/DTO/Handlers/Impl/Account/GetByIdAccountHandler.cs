@@ -24,7 +24,6 @@ namespace BankGraphQL.DTO.Handlers.Impl.Account
 
         public AccountResponse Execute(GetByIdAccountRequest request)
         {
-
             var validator = new GetByIdAccountValidator().Validate(request);
 
             if (!validator.IsValid)
@@ -39,18 +38,13 @@ namespace BankGraphQL.DTO.Handlers.Impl.Account
             if (account == null)
                 throw new Exception("Conta não encontrada");
 
-            var user = _userRepository.GetById(account.UserId);
-
-            if (user == null)
-                throw new Exception("Usuário não encontrado");
-
             return new AccountResponse
             {
                 Id = (Guid)account.Id,
                 Number = account.Number,
                 Value = account.Value,
                 UserId = account.UserId,
-                UserName = user.Name,
+                UserName = account.User.Name,
                 Active = account.Active,
                 DataDelete = account.DataDelete,
                 DataCreate = account.DataCreate,

@@ -24,7 +24,7 @@ namespace BankGraphQL.GraphQL.Query
             return handler.Execute(request);
         }
 
-        public WithdrawDepositAccountResponse GetSaldo([Service] IBalanceAccountHandler handler, string number)
+        public WithdrawDepositAccountResponse GetBalance([Service] IBalanceAccountHandler handler, string number)
         {
             return handler.Execute(number);
         }

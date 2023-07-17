@@ -63,12 +63,12 @@ namespace BankGraphQL.Migrations
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "Id", "Active", "DataCreate", "DataDelete", "DataModification", "Email", "Name" },
-                values: new object[] { new Guid("11111111-1111-1111-1111-111111111111"), true, new DateTime(2023, 7, 16, 16, 12, 55, 583, DateTimeKind.Local).AddTicks(9545), null, null, "user1@user1.com", "User 1" });
+                values: new object[] { new Guid("11111111-1111-1111-1111-111111111111"), true, new DateTime(2023, 7, 16, 23, 58, 2, 460, DateTimeKind.Local).AddTicks(6515), null, null, "user@user.com", "User" });
 
             migrationBuilder.InsertData(
                 table: "Account",
                 columns: new[] { "Id", "Active", "DataCreate", "DataDelete", "DataModification", "Number", "UserId", "Value" },
-                values: new object[] { new Guid("11111111-1111-1111-0000-000000000001"), true, new DateTime(2023, 7, 16, 16, 12, 55, 583, DateTimeKind.Local).AddTicks(9750), null, null, "50150", new Guid("11111111-1111-1111-1111-111111111111"), 1000.00m });
+                values: new object[] { new Guid("11111111-1111-1111-0000-000000000001"), true, new DateTime(2023, 7, 16, 23, 58, 2, 460, DateTimeKind.Local).AddTicks(6743), null, null, "54321", new Guid("11111111-1111-1111-1111-111111111111"), 1000.00m });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Account_UserId",

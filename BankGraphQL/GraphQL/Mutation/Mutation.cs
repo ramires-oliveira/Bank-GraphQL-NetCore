@@ -16,12 +16,12 @@ namespace BankGraphQL.GraphQL.Mutations
             return handler.Execute(request);
         }
 
-        public WithdrawDepositAccountResponse Sacar([Service] IWithdrawAccountHandler handler, string number, decimal value)
+        public WithdrawDepositAccountResponse Withdraw([Service] IWithdrawAccountHandler handler, string number, decimal value)
         {
             return handler.Execute(number, value);
         }
 
-        public WithdrawDepositAccountResponse Depositar([Service] IDepositAccountHandler handler, string number, decimal value)
+        public WithdrawDepositAccountResponse Deposit([Service] IDepositAccountHandler handler, string number, decimal value)
         {
             return handler.Execute(number, value);
         }

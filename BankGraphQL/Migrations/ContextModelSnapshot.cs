@@ -57,8 +57,8 @@ namespace BankGraphQL.Migrations
                         {
                             Id = new Guid("11111111-1111-1111-0000-000000000001"),
                             Active = true,
-                            DataCreate = new DateTime(2023, 7, 16, 16, 12, 55, 583, DateTimeKind.Local).AddTicks(9750),
-                            Number = "50150",
+                            DataCreate = new DateTime(2023, 7, 16, 23, 58, 2, 460, DateTimeKind.Local).AddTicks(6743),
+                            Number = "54321",
                             UserId = new Guid("11111111-1111-1111-1111-111111111111"),
                             Value = 1000.00m
                         });
@@ -97,9 +97,9 @@ namespace BankGraphQL.Migrations
                         {
                             Id = new Guid("11111111-1111-1111-1111-111111111111"),
                             Active = true,
-                            DataCreate = new DateTime(2023, 7, 16, 16, 12, 55, 583, DateTimeKind.Local).AddTicks(9545),
-                            Email = "user1@user1.com",
-                            Name = "User 1"
+                            DataCreate = new DateTime(2023, 7, 16, 23, 58, 2, 460, DateTimeKind.Local).AddTicks(6515),
+                            Email = "user@user.com",
+                            Name = "User"
                         });
                 });
 
